@@ -22,3 +22,15 @@ p::before {
   height: 0.2rem;
   background-color: aqua;
 }
+
+h1::first-line {
+  color: red;
+}
+h1::first-letter {
+  color: rgb(24, 210, 30);
+  font-size: 2rem;
+}
+h1::selection {
+  color: white;
+  background-color: black;
+}
