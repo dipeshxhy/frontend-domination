@@ -93,3 +93,17 @@ p {
   background-color: blue;
   position: absolute;
 }
+body {
+  min-height: 120vh;
+}
+.box {
+  position: fixed;
+}
+
+.cube {
+  width: 10rem;
+  height: 10rem;
+  background-color: brown;
+  position: absolute;
+  right: 0;
+}
