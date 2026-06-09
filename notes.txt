@@ -36,3 +36,15 @@ some where more than one elements seen there are div
  - block : take full 100% width
  - inline : inline elements comes into one line. it doesnot take width and height.
  - inline-block : it can increase width and height and also it comes into one line .
+
+
+ #colors
+ - red
+ - green
+ - blue
+ 
+ these color has min 0 and max 255
+
+ (255,255,255) = white
+ (0,0,0) = black
+ 

@@ -34,3 +34,32 @@ h1::selection {
   color: white;
   background-color: black;
 }
+
+/* hover */
+h1:hover {
+  color: red;
+}
+button:active {
+  background-color: peru;
+}
+input:focus {
+  background-color: lightblue;
+}
+input:disabled {
+  background-color: lightgray;
+}
+input:checked {
+  background-color: lightgreen;
+}
+
+/* :nth-child */
+
+.text p:nth-child(2) {
+  color: red;
+}
+.text p:nth-child(3) {
+  color: blue;
+}
+.text p:nth-child(4) {
+  color: green;
+}
