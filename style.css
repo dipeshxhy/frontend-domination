@@ -1,141 +1,24 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+/* p{
+color: red;
 }
-html {
-  font-size: 62.5%;
+p::before{
+  content: "TOP";
+  color: blue;
 }
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-h1 {
-  color: slateblue;
-  text-align: center;
-  padding: 2rem;
-}
-
-.box {
-  width: 20rem;
-  height: 20rem;
-  background-color: lightcoral;
-}
-
-/* #test {
-  width: 20rem;
-  height: 20rem;
-  background-color: lightblue;
+p::after{
+  content: "->";
+  color: green;
 } */
-
-#test {
-  width: 50%;
-  height: 50%;
-  background-color: crimson;
-}
-
-#practice {
-  width: 20rem;
-  height: 20rem;
-  background-color: green;
-  /* overflow: hidden; */
-}
-/* #child {
-  width: 100%;
-  height: 100%;
-  background-color: lightgreen;
-} */
-
-#child {
-  width: 80vw;
-  height: 80vh;
-  background-color: rgb(14, 61, 179);
-}
-
 p {
-  line-height: 1.7;
+  position: relative;
+  width: fit-content;
 }
-
-.box {
-  margin: 10%;
-  background-color: beige;
-  border: 0.2rem solid salmon;
-  padding: 2rem;
-  border-radius: 2rem;
-}
-
-p {
-  color: white;
-  background-color: orange;
-  display: inline-block;
-  width: 20rem;
-}
-
-.car1 {
-  width: 10rem;
-  height: 18rem;
-  background-color: red;
-  /* position: absolute; */
-  left: 50%;
-}
-.car2 {
-  width: 20rem;
-  height: 10rem;
-  background-color: green;
+p::before {
+  content: '';
   position: absolute;
-}
-.car3 {
-  width: 15rem;
-  height: 15rem;
-  background-color: blue;
-  position: absolute;
-}
-
-.cube {
-  width: 10rem;
-  height: 10rem;
-  background-color: brown;
-  position: absolute;
-  right: 0;
-}
-
-/* .box {
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF0dGVybmVkJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-.box {
-  background: linear-gradient(to right bottom, red, green);
-}
-
-.parent {
-  display: flex;
-  /* justify-content: space-evenly;
-  align-items: center; */
-  justify-content: space-between;
-  align-items: start;
-  flex-wrap: wrap;
-  /* flex-direction: column; */
-  height: 80vh;
-  border: 2rem solid lightgreen;
-}
-
-.child {
-  flex: 1 1 10rem;
-  width: 10rem;
-  height: 10rem;
-  background-color: lightblue;
-}
-.child:nth-child(2) {
-  background-color: lightcoral;
-}
-.child:nth-child(3) {
-  background-color: lightpink;
-}
-.child:nth-child(4) {
-  background-color: lightyellow;
+  bottom: -0.42rem;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: aqua;
 }
