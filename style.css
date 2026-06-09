@@ -73,3 +73,23 @@ p {
   display: inline-block;
   width: 20rem;
 }
+
+.car1 {
+  width: 10rem;
+  height: 18rem;
+  background-color: red;
+  /* position: absolute; */
+  left: 50%;
+}
+.car2 {
+  width: 20rem;
+  height: 10rem;
+  background-color: green;
+  position: absolute;
+}
+.car3 {
+  width: 15rem;
+  height: 15rem;
+  background-color: blue;
+  position: absolute;
+}
