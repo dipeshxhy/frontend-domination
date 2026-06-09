@@ -66,3 +66,10 @@ p {
   padding: 2rem;
   border-radius: 2rem;
 }
+
+p {
+  color: white;
+  background-color: orange;
+  display: inline-block;
+  width: 20rem;
+}

@@ -31,3 +31,8 @@ some where more than one elements seen there are div
  - root empherial units
 
  # max width and max height
+
+ # display property
+ - block : take full 100% width
+ - inline : inline elements comes into one line. it doesnot take width and height.
+ - inline-block : it can increase width and height and also it comes into one line .
