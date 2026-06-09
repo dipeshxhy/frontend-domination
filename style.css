@@ -60,8 +60,9 @@ p {
 }
 
 .box {
-  margin: 4rem;
-  padding: 4rem;
-  font-size: 1.12rem;
-  padding-bottom: 4rem;
+  margin: 10%;
+  background-color: beige;
+  border: 0.2rem solid salmon;
+  padding: 2rem;
+  border-radius: 2rem;
 }
