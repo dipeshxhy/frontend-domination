@@ -111,3 +111,31 @@ p {
 .box {
   background: linear-gradient(to right bottom, red, green);
 }
+
+.parent {
+  display: flex;
+  /* justify-content: space-evenly;
+  align-items: center; */
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  height: 80vh;
+  border: 2rem solid lightgreen;
+}
+
+.child {
+  flex: 1 1 10rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: lightblue;
+}
+.child:nth-child(2) {
+  background-color: lightcoral;
+}
+.child:nth-child(3) {
+  background-color: lightpink;
+}
+.child:nth-child(4) {
+  background-color: lightyellow;
+}
