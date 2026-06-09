@@ -1,4 +1,33 @@
-- what is HTML
-> all content of website is HTML
-- heading, paragraph, image,audio,video, button
+some where more than one elements seen there are div
+- rectangular box is div
 
+** h1 : h1 tag
+- .class : class
+- #id : id
+
+
+- color is text color
+- background-color : bg-color
+
+- units : px, % , vw,vh, em, rem
+
+- px : 1px = 1px on screen
+
+ dpi : depth per inch 
+ ppi : pixel per inch
+
+ px is absolute units. it means it doesnot change according to screen size . it is static.
+
+ - percentage : total ka hissa
+ - 20% of parent
+
+ - vw and vh: it is relative to viewport 
+ 
+ diff between % and vw 
+ - % takes from parent
+ - vw and vh take from screen
+
+ # em and rem
+ - root empherial units
+
+ # max width and max height
