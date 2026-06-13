@@ -1,4 +1,17 @@
-- what is HTML
-> all content of website is HTML
-- heading, paragraph, image,audio,video, button
+// keyword 
+it got meaning in programming
+like
+for , let, const, function, this, while, do while, if , else, class
 
+// this 
+-> it value change according to context
+in differnet condition and situation
+-> learn every condition then we understand this
+
+// global scope : window
+// function : window
+// method : object
+// function inside method (es5) : window
+// function inside method (es6)
+// constructor function : new object
+// event listener : element in which event listener attached
