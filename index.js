@@ -1,18 +1,15 @@
-const img1 = document.querySelector('#img1');
-const img2 = document.querySelector('#img2');
-const btn = document.querySelector('button');
-const src1 = img1.getAttribute('src');
-const src2 = img2.getAttribute('src');
+const form = document.querySelector('form')
+const inp1 = document.querySelector('#inp1')  
+const inp2 = document.querySelector('#inp2')
 
-let isToggle = false;
-btn.addEventListener('click', function() {
-  if(!isToggle) {
-    img1.setAttribute('src', src2);
-    img2.setAttribute('src', src1);
-  } else {
-    img1.setAttribute('src', src1);
-    img2.setAttribute('src', src2);
-  }  
-  isToggle = !isToggle;
-});
-   
+
+form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  let inp1Value = inp1.value;
+  let inp2Value = inp2.value;
+  if(!inp1Value || !inp2Value){
+    alert('Please fill both the inputs')
+  }else{
+    console.log(inp1Value, inp2Value)
+  }
+})
