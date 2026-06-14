@@ -24,6 +24,7 @@ const data = [{
 const App = () => {
   const [value,setValue] = useState(data)
   const [count,setCount] = useState(0)
+  const [isBanned,setIsBanned] = useState(false)
   const handleFollow = (id) => {
     setValue(prevValue => 
       prevValue.map(item => 
@@ -40,6 +41,9 @@ const App = () => {
      <h2>{count}</h2>
      <button onClick={() => setCount(count + 1)}>increase</button>
      <button onClick={() => setCount(count - 1)}>decrease</button>
+
+     <h3>{isBanned ? 'You are banned' : 'You are not banned'}</h3>
+      <button onClick={() => setIsBanned(!isBanned)}>{isBanned ? 'Unban' : 'Ban'}</button>
       
     </div>
   )
