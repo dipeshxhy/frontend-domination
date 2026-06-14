@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Card from "./Card"
+import Intermediate from "./Intermediate"
+import Advanced from "./Advanced"
 
 const data = [{
   id:1,
@@ -38,13 +40,11 @@ const App = () => {
 )) 
   return (
     <div className="bg-slate-800 text-white h-screen flex flex-col justify-center items-center">
-     <h2>{count}</h2>
-     <button onClick={() => setCount(count + 1)}>increase</button>
-     <button onClick={() => setCount(count - 1)}>decrease</button>
-
-     <h3>{isBanned ? 'You are banned' : 'You are not banned'}</h3>
-      <button onClick={() => setIsBanned(!isBanned)}>{isBanned ? 'Unban' : 'Ban'}</button>
-      
+  <Intermediate/>
+  <div>
+    <h3>Advanced</h3>
+    <Advanced/>
+  </div>
     </div>
   )
 }
