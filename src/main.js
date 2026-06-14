@@ -1,52 +1,21 @@
-import { gsap } from "gsap";
-    
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LocomotiveScroll from 'locomotive-scroll';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-const tl = gsap.timeline()
 
-tl.from('.page1 .circle',{
-  scale:0,
-  opacity: 0,
-  rotate:760,
-  duration:4,
- 
+const locomotiveScroll = new LocomotiveScroll();
 
-})
-
-gsap.from('.page3 .circle',{
-  scale:0,
-  opacity: 0,
-  rotate:360,
-  duration:2,
-  scrollTrigger:{
-    trigger:'.page3 .circle',
-    scroller:'body',
-    start:'top 80%',
-    end:'top 40%',
-    scrub:1,
-    markers:true,
+gsap.to('.page2 img',{
+  width: '100%',
+  scrollTrigger: {
+    trigger: '.page2 ',
+    scroller: 'main',
+    start: 'top 0%',
+    end: 'top -100%',
+    scrub: true,
+    markers: true,
+    pin: true,
   }
 })
 
-const track = document.querySelector(".track");
-
-gsap.to(track, {
-  x: () => -(track.scrollWidth / 2),
-  duration: 20,
-  ease: "none",
-  repeat: -1,
-});
-
-gsap.to(".page2 img", {
-  width: "100%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".page2",
-    start: "top top",
-    end: "top -100%",
-    pin: true,
-    scrub: 1,
-    markers: true,
-  },
-});

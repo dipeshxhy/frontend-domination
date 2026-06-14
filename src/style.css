@@ -1,3 +1,4 @@
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
 *{
   margin: 0;
   padding: 0;
@@ -26,6 +27,8 @@ a{
   color: black;
 }
 
+
+
 .page1{
   height: 100vh;
   background-color: cyan;
@@ -36,13 +39,18 @@ a{
 .page2{
   height: 100vh;
   background-color: tomato;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  
 }
 .page3{
-  height: 100vh;
+  height: 100%;
   background-color: lightgreen;
+  overflow: hidden;
+  
+}
+.page4{
+  height: 100vh;
+  background-color: lightpink;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,8 +82,17 @@ background: linear-gradient(135deg, #ff7b00 0%, #ffc300 100%);
 
 .page2 img{
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   height: 100%;
   width: 20%;
   margin: 0 auto;
   object-fit: cover;
+}
+
+.page3 h1{
+  font-size:80rem;
+  color: #000;
+  letter-spacing: -80px;
+  text-transform: uppercase;
 }
