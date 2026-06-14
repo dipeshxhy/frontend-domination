@@ -13,8 +13,17 @@
       justify-content: center;
       align-items: center;
     }
-    input{
+    textarea{
       width:40vw;
+      height: 200px;
+      padding: 10px;
+      font-size: 24px;
+      border: 1px solid black;
+      outline-color: royalblue;
+      border-radius: 10px;
+    }
+    input {
+      width: 40vw;
       padding: 10px;
       font-size: 24px;
       border: 1px solid black;
@@ -35,17 +44,29 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    #clearButton{
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: royalblue;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
     
   </style>
 </head>
 <body>
   <div class="main">
+    <input type="number" id="maxChars" placeholder="type max limit of chars..." >
     <div>
-      <input type="text" placeholder="search by name ...">
+      <h3>Chars Count : <span id="textCount">0</span>/<span id="maxCharsDisplay">100</span></h3>
+      <textarea name="" id="contentArea" placeholder="put your comment ..."></textarea> <br>
+    <button id="clearButton">Clear all</button>
+
     </div>
-    <div class="profiles">
-      
-    </div>
+    
   </div>
   <script src="index.js"></script>
 </body>
