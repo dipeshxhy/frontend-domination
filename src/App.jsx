@@ -23,6 +23,7 @@ const data = [{
 
 const App = () => {
   const [value,setValue] = useState(data)
+  const [count,setCount] = useState(0)
   const handleFollow = (id) => {
     setValue(prevValue => 
       prevValue.map(item => 
@@ -35,12 +36,10 @@ const App = () => {
   
 )) 
   return (
-    <div className="bg-slate-800 text-black h-screen flex justify-center items-center">
-      <div className="flex gap-4">
-        {
-         renderCard
-        }
-      </div>
+    <div className="bg-slate-800 text-white h-screen flex flex-col justify-center items-center">
+     <h2>{count}</h2>
+     <button onClick={() => setCount(count + 1)}>increase</button>
+     <button onClick={() => setCount(count - 1)}>decrease</button>
       
     </div>
   )
