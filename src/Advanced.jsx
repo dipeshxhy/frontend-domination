@@ -1,12 +1,16 @@
 import React from 'react';
 
 const Advanced = () => {
-  const [person, setPerson] = React.useState({
-    name: 'Dipesh',
-    isBanned: false,
-    age: 24,
-  });
-  const [numbers, setNumbers] = React.useState([1, 2, 3, 4, 5, 6]);
+  const [person, setPerson] = React.useState([
+    {
+      name: 'Dipesh',
+      ag: 24,
+    },
+    {
+      name: 'Manisha',
+      ag: 22,
+    },
+  ]);
   function addGender() {
     setPerson((prev) => ({
       ...prev,
@@ -18,26 +22,29 @@ const Advanced = () => {
   //   },[])
   return (
     <div className="w-98 bg-slate-300 rounded p-4 text-black">
-     
-
       <hr />
 
       <div>
-        {numbers.map((n, i) => {
+        {person.map((p, i) => {
           return (
             <div key={i}>
               <ul>
-                <li>{n}</li>
+                <li>{p.name}</li>
+                <li>{p.ag}</li>
               </ul>
             </div>
           );
         })}
         <button
           onClick={() =>
-            setNumbers(prev=>[...prev, prev.length + 1])
+            setPerson((prev) =>
+              prev.map((p) =>
+                p.name == 'Dipesh' ? { ...p, ag: p.ag + 1 } : p,
+              ),
+            )
           }
         >
-          Add
+          Increase Dipesh's Age
         </button>
       </div>
     </div>
