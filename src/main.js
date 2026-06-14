@@ -13,22 +13,7 @@ tl.from('.page1 .circle',{
  
 
 })
-tl.from('.page2 .circle',{
-  scale:0,
-  opacity: 0,
-  rotate:360,
-  duration:2,
-  scrollTrigger:{
-    trigger:'.page2 .circle',
-    scroller:'body',
-    start:'top 80%',
-    end:'top 40%',
-    scrub:1,
-    
-    markers:true,
-  }
 
-})
 gsap.from('.page3 .circle',{
   scale:0,
   opacity: 0,
@@ -51,4 +36,17 @@ gsap.to(track, {
   duration: 20,
   ease: "none",
   repeat: -1,
+});
+
+gsap.to(".page2 img", {
+  width: "100%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".page2",
+    start: "top top",
+    end: "top -100%",
+    pin: true,
+    scrub: 1,
+    markers: true,
+  },
 });
