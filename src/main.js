@@ -1,21 +1,40 @@
-import LocomotiveScroll from 'locomotive-scroll';
-import {gsap} from 'gsap';
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import Lenis from "lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const locomotiveScroll = new LocomotiveScroll();
+const lenis = new Lenis();
 
-gsap.to('.page2 img',{
-  width: '100%',
+function raf(time) {
+  lenis.raf(time);
+  ScrollTrigger.update();
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+gsap.to(".page2 img", {
+  width: "100%",
   scrollTrigger: {
-    trigger: '.page2 ',
-    scroller: 'main',
-    start: 'top 0%',
-    end: 'top -100%',
+    trigger: ".page2",
+    start: "top top",
+    end: "+=100%",
+    pin: '.page2',
     scrub: true,
     markers: true,
-    pin: true,
-  }
-})
+  },
+});
 
+gsap.from(".page4 .circle", {
+  scale: 0,
+  opacity: 0,
+  rotate: 360,
+  scrollTrigger: {
+    trigger: ".page4",
+    start: "top 70%",
+    end: "top 30%",
+    scrub: 2,
+    markers: true,
+  },
+});
