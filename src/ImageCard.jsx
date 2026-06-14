@@ -23,9 +23,9 @@ export default function ImageCard() {
 
   return (
     <div className="relative w-96 h-64">
-      <div className=" w-full h-full">
+      <div className=" w-full h-full overflow-hidden">
         <div
-          className="flex overflow-hidden h-full transition-transform duration-500 ease-in-out"
+          className="flex  h-full transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
