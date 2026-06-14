@@ -1,9 +1,12 @@
+import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
 
 const App = () => {
-  const name = 'Dipesh'
   return (
     <div>
-      <h1>Hello {name}!</h1>
+      <Navbar/>
+      <Hero/>
+      
     </div>
   )
 }
