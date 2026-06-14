@@ -34,10 +34,10 @@ const Advanced = () => {
         })}
         <button
           onClick={() =>
-            setNumbers((prev) => prev.filter((num, index) => num%2!==0))
+            setNumbers(prev=>[...prev, prev.length + 1])
           }
         >
-          erase
+          Add
         </button>
       </div>
     </div>
