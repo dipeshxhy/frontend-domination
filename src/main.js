@@ -43,3 +43,12 @@ gsap.from('.page3 .circle',{
     markers:true,
   }
 })
+
+const track = document.querySelector(".track");
+
+gsap.to(track, {
+  x: () => -(track.scrollWidth / 2),
+  duration: 20,
+  ease: "none",
+  repeat: -1,
+});
