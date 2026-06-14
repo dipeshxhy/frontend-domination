@@ -1,45 +1,35 @@
 import { gsap } from 'gsap'
-// gsap.to('.box', {
-//   // x: 400,
-//   // duration: 2,
-//   // rotation: 360,
-//   // scale: 1.5,
-//   // ease: 'bounce.out',
-//   // left: '50%',
-//   // position: 'absolute',
-//   // top: '50%',
-//   // xPercent: -50,
-//   // yPercent: -50,
-//   // duration: 2,
-//   // ease: 'power2.out'
-//   x:1000,
-//   duration:2,
-//   delay:1,
-//   rotate:360,
-//   repeat:-1,
-//   // backgroundColor:'blue'
-// })
+const tl = gsap.timeline({
+  defaults:{
+    duration:1,
+    ease:'power4.in'
+  }
+})
+tl.from('.nav div, .nav li',{
+  y:-100,
+  duration:2,
+  opacity:0,
+  // delay:0.4,
+  stagger:0.1,
+  ease:'power4.out'
+})
 
-let tl = gsap.timeline()
+// main title animation
+tl.from('.title h1',{
+  x:-1500,
+  // opacity:0
+  stagger:0.3,
+  ease:'elastic.out(1,0.5)'
+})
 
-tl.to('#box1',{
-  x:1200,
-  rotate:360,
-  duration:2,
-  scale:0.5,
-  // delay:1,
-})
-tl.to('#box2',{
-  x:1200,
-  rotate:360,
-  duration:2,
-  scale:0.5,
-  // delay:2,
-})
-tl.from('#box3',{
-  x:1200,
-  rotate:360,
-  duration:2,
-  scale:0.5,
-  // delay:3,
-})
+// images animation
+
+
+tl.from('.images img',{
+  x:100,
+  opacity:0,
+  stagger:1,
+  rotate:45,
+  ease:'power1.out'
+},'-=1.5')
+
