@@ -1,63 +1,28 @@
 import { useState } from 'react';
-import Card from './Card';
-import ImageCard from './ImageCard';
-
-const data = [
-  {
-    id: 1,
-    name: 'Dipesh Chaudhary',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.',
-    image:
-      'https://images.unsplash.com/photo-1773332611612-ffdaa753afb1?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3MXx8fGVufDB8fHx8fA%3D%3D',
-    isFollow: true,
-  },
-  {
-    id: 2,
-    name: 'Manisha Kumari',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.',
-    image:
-      'https://images.unsplash.com/photo-1773332611573-5e5bfa8e5de5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3OHx8fGVufDB8fHx8fA%3D%3D',
-    isFollow: false,
-  },
-  {
-    id: 3,
-    name: 'Sumit Kadel',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.',
-    image:
-      'https://plus.unsplash.com/premium_photo-1779372801181-0d00b1448662?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDJ8fHxlbnwwfHx8fHw%3D',
-    isFollow: true,
-  },
-];
+import Playlist from './Playlist';
 
 const App = () => {
-  const [value, setValue] = useState(data);
-  const [count, setCount] = useState(0);
-  const [isBanned, setIsBanned] = useState(false);
-  const handleFollow = (id) => {
-    setValue((prevValue) =>
-      prevValue.map((item) =>
-        item.id === id ? { ...item, isFollow: !item.isFollow } : item,
-      ),
-    );
-  };
-  const renderCard = value.map((item) => (
-    <Card
-      key={item.id}
-      id={item.id}
-      name={item.name}
-      description={item.description}
-      image={item.image}
-      isFollow={item.isFollow}
-      onFollow={handleFollow}
-    />
-  ));
+  const [playlists, setPlaylists] = useState([
+    { id: 1, name: 'chand tare', singer: 'Kumar',isFav:false },
+    { id: 2, name: 'Tere Naam', singer: 'Udit Narayan',isFav:false },
+    { id: 3, name: 'Tere surror', singer: 'Himesh Resahmaya',isFav:false },
+    { id: 4, name: 'Hamari Adhuri Kahani', singer: 'Arman Malik' ,isFav:false},
+  ]);
+const addFav = (id)=>{
+  setPlaylists(prev=>prev.map(p=>p.id===id?({...p,isFav:!p.isFav}):p))
+}
+const numsFav = playlists.filter(p=>p.isFav).length
+  const showPlaylist = playlists.map((p) => <Playlist key={p.id} song={p} addFav={addFav} />);
+
   return (
-    <div className="bg-slate-800 text-black gap-4 h-screen flex justify-center items-center">
-      {/* {renderCard} */}
-      <ImageCard/>
+    <div className="flex h-screen max-w-7xl mx-auto flex-col items-center justify-center ">
+      <header className="flex justify-between w-full mb-20 ">
+        <div>Orange</div>
+        <div>
+          favorites: <span>{numsFav}</span>
+        </div>
+      </header>
+      <div className='flex gap-4'>{showPlaylist}</div>
     </div>
   );
 };
